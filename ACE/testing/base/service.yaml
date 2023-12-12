@@ -8,4 +8,4 @@ spec:
     app: trigger-react
   ports:
   - port: 3000
-    protocol: UDP
+    protocol: TCP
