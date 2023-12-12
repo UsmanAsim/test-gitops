@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: test-bootstrap
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: test
+    server: https://kubernetes.default.svc
+  project: argotest
+  source:
+    path: argocd/testing/
+    repoURL: https://github.com/UsmanAsim/test-gitops.git
+    targetRevision: main

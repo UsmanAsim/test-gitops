@@ -1,0 +1,28 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: test-ace-applicationset
+  namespace: openshift-gitops
+spec:
+  generators:
+    - git:
+        repoURL: https://github.com/UsmanAsim/test-gitops.git
+        revision: HEAD
+        files:
+        - path: "ACE/**/overlays/**/dev_config.json"
+  template:
+    metadata:
+      name: '{{microservice}}'
+    spec:
+      project: argotest
+      source:
+        repoURL: https://github.com/UsmanAsim/test-gitops.git
+        targetRevision: HEAD
+        path: "ACE/{{folder}}/overlays/dev/"
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: dev
+      syncPolicy:
+        automated:
+          prune: true  
+          selfHeal: true
