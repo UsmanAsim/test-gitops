@@ -8,7 +8,7 @@ spec:
   destination:
     namespace: test ## incase of openshift change this to openshift-gitops
     server: https://kubernetes.default.svc
-  project: argotest ## argo cd project
+  project: default ## argo cd project
   source:
     path: ACE/argocd/testing/  ## path where it reads other argo manifists
     repoURL: https://github.com/UsmanAsim/test-gitops.git

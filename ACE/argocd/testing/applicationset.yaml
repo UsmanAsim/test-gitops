@@ -14,7 +14,7 @@ spec:
     metadata:
       name: '{{microservice}}'
     spec:
-      project: argotest
+      project: default 
       source:
         repoURL: https://github.com/UsmanAsim/test-gitops.git
         targetRevision: HEAD
