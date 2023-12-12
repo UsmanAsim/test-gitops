@@ -7,3 +7,7 @@ patches:
   - target:
       kind: Ingress
     path: ingress.yaml
+
+  - target:
+      kind: Service
+    path: service.yaml
