@@ -3,3 +3,7 @@ bases:
 patches:
   - path: image.yaml
   - path: replica.yaml
+
+  - target:
+      kind: Ingress
+    path: ingress.yaml
