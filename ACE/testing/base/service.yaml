@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: reactapp-svc
-  namespace: prod
+  namespace: dev
 spec:
   selector:
     app: trigger-react
