@@ -4,19 +4,15 @@ metadata:
   name: dev-deploy-applicationset
   namespace: gitops
 spec:
-  template:
-    metadata:
-      name: 'react-deployment'
-    spec:
-      project: default
-      source:
-        repoURL: https://github.com/UsmanAsim/test-gitops.git
-        targetRevision: HEAD
-        path: "ACE/testing/overlays/dev/"
-      destination:
-        server: https://kubernetes.default.svc
-        namespace: dev
-      syncPolicy:
-        automated:
-          prune: true  
-          selfHeal: true
+  project: default
+  source:
+    repoURL: https://github.com/UsmanAsim/test-gitops.git
+    targetRevision: HEAD
+    path: "ACE/testing/overlays/dev/"
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: dev
+  syncPolicy:
+    automated:
+      prune: true  
+      selfHeal: true
