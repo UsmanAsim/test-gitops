@@ -1,19 +1,19 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: test
+  name: dev-deploy
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: test ## incase of openshift change this to openshift-gitops
+    namespace: gitops ## incase of openshift change this to openshift-gitops
     server: https://kubernetes.default.svc
   project: default ## argo cd project
   source:
     path: ACE/argocd/testing/  ## path where it reads other argo manifists
     repoURL: https://github.com/UsmanAsim/test-gitops.git
     targetRevision: main
-  # syncPolicy:
-  #   automated:
-  #     prune: true  
-  #     selfHeal: true
+  syncPolicy:
+    automated:
+      prune: true  
+      selfHeal: true

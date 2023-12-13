@@ -1,12 +1,12 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: test-bootstrap
+  name: dev-bootstrap
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: test
+    namespace: gitops
     server: https://kubernetes.default.svc
   project: default
   source:
