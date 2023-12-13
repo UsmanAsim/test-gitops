@@ -1,6 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: react-deployment
+  name: react-qa-deployment
 spec:
   replicas: 5
