@@ -1,18 +1,26 @@
 apiVersion: argoproj.io/v1alpha1
-kind: ApplicationSet
+kind: Application
 metadata:
-  name: dev-deploy-applicationset
-  namespace: gitops
+  name: react-applicationset
 spec:
-  project: default
-  source:
-    repoURL: https://github.com/UsmanAsim/test-gitops.git
-    targetRevision: main
-    path: "ACE/testing/overlays/dev/"
   destination:
-    server: https://kubernetes.default.svc
-    namespace: dev
+    name: ''
+    namespace: gitops
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: ACE/testing/overlays/dev/
+    repoURL: 'https://github.com/UsmanAsim/test-gitops.git'
+    targetRevision: HEAD
+  sources: []
+  project: default
   syncPolicy:
-    automated:
-      prune: true  
-      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+project: default
+source:
+  repoURL: 'https://github.com/UsmanAsim/test-gitops.git'
+  path: ACE/testing/overlays/dev/
+  targetRevision: HEAD
+destination:
+  server: 'https://kubernetes.default.svc'
+  namespace: dev
