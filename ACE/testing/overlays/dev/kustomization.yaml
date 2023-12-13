@@ -2,12 +2,12 @@ bases:
   - ../../base
 patches:
   - path: image.yaml
-  - path: replica.yaml
+#  - path: replica.yaml
 
-  - target:
-      kind: Ingress
-    path: ingress.yaml
+#  - target:
+#      kind: Ingress
+#    path: ingress.yaml
 
-  - target:
-      kind: Service
-    path: service.yaml
+#  - target:
+#      kind: Service
+#    path: service.yaml
