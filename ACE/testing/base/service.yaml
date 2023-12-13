@@ -7,5 +7,4 @@ spec:
   selector:
     app: trigger-react
   ports:
-  - port: abc
     protocol: TCP
