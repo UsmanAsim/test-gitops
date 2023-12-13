@@ -3,6 +3,7 @@ resources:
 patches:
   - path: image.yaml
   - path: replica.yaml
+  - path: resources.yaml
   - path: service.yaml
   - path: ingress.yaml
 
