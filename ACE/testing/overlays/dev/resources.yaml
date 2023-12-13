@@ -12,8 +12,6 @@ spec:
         app: trigger-react
     spec:
       containers:
-      - name: tekton-pod
-        - containerPort: 3000
         resources:
           requests:
             memory: "64Mi"
