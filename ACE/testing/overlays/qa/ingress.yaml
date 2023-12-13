@@ -10,7 +10,7 @@ spec:
   rules:
   - http:
       paths:
-      - path: /react(/|$)(.*)
+      - path: /react-qa(/|$)(.*)
         pathType: Prefix
         backend:
           service:
