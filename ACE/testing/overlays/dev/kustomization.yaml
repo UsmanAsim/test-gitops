@@ -4,7 +4,7 @@ patches:
   - path: image.yaml
   - path: replica.yaml
   - path: service.yaml
-  - path: ingress.yaml
+#  - path: ingress.yaml
 
 
 #  - target:
