@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: react-qa-deployment
+  name: react-deployment
 spec:
   selector:
     matchLabels:
