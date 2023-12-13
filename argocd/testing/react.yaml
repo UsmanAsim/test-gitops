@@ -6,14 +6,14 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: gitops ## incase of openshift change this to openshift-gitops
+    namespace: gitops
     server: https://kubernetes.default.svc
-  project: default ## argo cd project
+  project: default
   source:
-    path: ACE/argocd/testing/  ## path where it reads other argo manifists
+    path: ACE/argocd/testing/
     repoURL: https://github.com/UsmanAsim/test-gitops.git
     targetRevision: main
   syncPolicy:
     automated:
-      prune: true  
+      prune: true
       selfHeal: true
