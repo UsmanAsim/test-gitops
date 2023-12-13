@@ -8,7 +8,7 @@ spec:
   destination:
     namespace: test
     server: https://kubernetes.default.svc
-  project: default 
+  project: confluent
   source:
     path: argocd/testing/
     repoURL: https://github.com/UsmanAsim/test-gitops.git
