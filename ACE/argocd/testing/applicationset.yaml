@@ -4,21 +4,15 @@ metadata:
   name: dev-deploy-applicationset
   namespace: gitops
 spec:
-  generators:
-    - git:
-        repoURL: https://github.com/UsmanAsim/test-gitops.git
-        revision: HEAD
-        files:
-        - path: "ACE/**/overlays/**/dev_config.json"
   template:
     metadata:
-      name: '{{microservice}}'
+      name: 'react-deployment'
     spec:
       project: default
       source:
         repoURL: https://github.com/UsmanAsim/test-gitops.git
         targetRevision: HEAD
-        path: "ACE/{{folder}}/overlays/dev/"
+        path: "ACE/testing/overlays/dev/"
       destination:
         server: https://kubernetes.default.svc
         namespace: dev
