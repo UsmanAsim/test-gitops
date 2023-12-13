@@ -1,0 +1,15 @@
+resources:
+  - ../../base
+patches:
+  - path: image.yaml
+  - path: replica.yaml
+  - path: service.yaml
+
+
+#  - target:
+#      kind: Ingress
+#    path: ingress.yaml
+
+#  - target:
+#      kind: Service
+#    path: service.yaml
