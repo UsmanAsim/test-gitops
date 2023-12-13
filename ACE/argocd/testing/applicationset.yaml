@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/UsmanAsim/test-gitops.git
-    targetRevision: HEAD
+    targetRevision: main
     path: "ACE/testing/overlays/dev/"
   destination:
     server: https://kubernetes.default.svc
